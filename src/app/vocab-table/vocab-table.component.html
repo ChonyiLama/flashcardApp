@@ -1,0 +1,14 @@
+ <table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th style="font-size: 12px;">alt names</th>
+    <th>Definiton</th>
+  </tr>
+  <tr *ngFor="let entity of this.vocabWords; index as index">
+    <td class="index-class">{{index}}</td>
+    <td>{{entity.get("name")}}</td>
+    <td>{{entity.get("alt_names")}}</td>
+    <td>{{entity.get("meaning")}}</td>
+  </tr>
+</table>

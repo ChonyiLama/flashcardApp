@@ -1,0 +1,45 @@
+<div style="padding-top:5rem; padding-bottom: 3rem;" class="accordion" id="accordionExample">
+<div class="card">
+  <div class="card-header" id="headingOne">
+    <h2 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      Add a New Word
+      </button>
+    </h2>
+  </div>		
+  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div class="card-body">
+      <form [formGroup]="addWordForm">
+        <label for="vocab-name">Name:&nbsp; </label>
+        <br><input type="text" id="vocab-name" name="vocab-name">
+        <br><label for="alt-names">Alternative Names: </label>
+        <br><input type="text" id="alt-names" name="alt-names">
+        <br><label for="meaning">Meaning:</label>
+        <br><textarea rows="2" cols="25" id="meaning" name="meaning" placeholder="boop"></textarea>
+        <br><button type="button" class="btn btn-outline-info">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header" id="headingTwo">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      Edit or View Vocab
+      </button>
+    </h2>
+  </div>
+  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+    <div class="card-body">
+      <ul>
+        <li *ngFor="let word of this.vocabList" contenteditable="true">
+          name: {{word.get('name')}}
+          <br>alternative name: {{word.get('alt_names')}}
+          <br>meaning: {{word.get('meaning')}}<br>
+        </li>
+        <!-- <app-vocab-display></app-vocab-display> -->
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
