@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
       const workbook = XLSX.read(bstr, { type: 'binary' });
       const first_sheet_name = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[first_sheet_name];
-      const worksheet_json = (XLSX.utils.sheet_to_json(worksheet, { raw: true });
+      const worksheet_json = (XLSX.utils.sheet_to_json(worksheet, { raw: true }));
       console.log('Sheet Names:' + workbook.SheetNames);
       console.log(XLSX.utils.sheet_to_json(worksheet, { raw: true }));
       for (const word of worksheet_json) {
