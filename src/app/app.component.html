@@ -5,24 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Vocab Practice</title>
   </head>
   <body>
     <div class="container">
+		<h2> {{englishTitle}} </h2>
+		<h2>{{tibetanTitle}}</h2><br><br><br>
         <div class="row">
             <div class="col-md-5">
 				<div class="options-containers">
 					<button (click)="this.showRandomWord();" (keyup.right)="this.showRandomWord();" 
-					class="next-icon btn btn-outline-warning" (keydown)="move($event)"
+					class="next-icon btn btn-outline-primary" (keydown)="move($event)"
 					id="next-word-btn" type="button">
 						<img class="dancing-lady" src="../assets/dancing-person.png">
 						<h4 style="display:inline; position: relative; right: 43px;"> Next word </h4>
 					</button><br><br>
-					<button type="button" class="btn btn-outline-warning" (click)="this.toggleFrontCard()">
-						{{this.frontCard}} 
+					<button type="button" class="btn btn-outline-primary" (click)="this.toggleFrontCard()">
+						{{frontCard}} 
 					</button><br><br>
 					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-						Vocab Words
+						{{showVocabListText}}
 					</button>
 					<div class="collapse" id="collapseExample">
 						<div class="card card-body overflow-auto vocab-table-cont">
@@ -44,7 +45,8 @@
 							</div>
 						</div>
 					</div>
-				<!-- <button class="btn btn-outline-warning"
+				<!-- TODO: look into algorithms for randomizing words and increasing probabilities for some
+				<button class="btn btn-outline-warning"
 				(click)="this.vocabListDataService.removeWord(this.vocabName)"> EASY </button>
 				<button class="btn btn-outline-warning"> YIKES </button> -->
 				</div>

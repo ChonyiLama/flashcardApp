@@ -20,6 +20,9 @@ export class AppComponent implements OnInit {
   vocabWords = VOCABLIST;
   frontCard = 'Show English First';
   showTibetan = true;
+  showVocabListText = 'See Vocab Words';
+  englishTitle = 'Practice Practice Practice';
+  tibetanTitle = 'ལགལེན་མང་པོ་བྱེད།';
   /* used for reading excel file **/
   vocabFileUrl = 'assets/vocabwords.xlsx';
 

@@ -4,8 +4,23 @@ html {
 body {
     min-height: 100%;
 }
+h2 {
+  text-align: center;
+}
 .options-containers .btn {
   width: 300px;
+}
+.btn-outline-primary {
+  color: lightcoral;
+  border-color: coral;
+  box-shadow:none; 
+}
+.btn-outline-primary:hover {
+  background-color: lightgoldenrodyellow;
+}
+.btn-primary {
+  background-color: lightcoral;
+  border-color: coral;
 }
 .container {
   position: relative;
@@ -61,7 +76,7 @@ body {
   transform: rotateY(180deg);
   color: grey;
 }
-
+/* TODO: replace this with another icon */
 .dancing-lady {
     width:7rem; 
     height:7rem;
